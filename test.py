@@ -35,14 +35,13 @@ import ntpath
 import warnings
 
 def test(title, fn):
-    title = "Testing %s... " % title
-    print title,
+    print(f"Testing {title}...")
     try:
         fn()
-        print "\tOK"
+        print("\tOK")
         return True
-    except Exception, e:
-        print "\tFAIL: %s" % str(e)
+    except Exception as e:
+        print(f"\tFAIL: {str(e)}")
         return False
 
 def test_module_load():
